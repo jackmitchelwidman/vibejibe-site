@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installing VibeJibe</title>
+<meta name="description" content="How to set up VibeJibe: create an account, add the Chrome extension, and connect ChatGPT, Claude, Gemini and Grok.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b0d12'/%3E%3Ccircle cx='16' cy='16' r='5' fill='none' stroke='%23c9d1e6' stroke-width='1.5'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #0b0d12;
+    --fg: #c9d1e6;
+    --bright: #e6eaf5;
+    --dim: #7b8399;
+    --accent: #8f9cf5;
+    --line: #1e2334;
+    --card: #141826;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  header.top {
+    padding: 28px 24px 0;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+  .ring {
+    width: 12px; height: 12px;
+    border: 1.5px solid var(--fg);
+    border-radius: 50%;
+    box-shadow: 0 0 24px rgba(59, 79, 214, 0.45);
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+  h1 {
+    margin: 0 0 10px;
+    font-weight: 300;
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    line-height: 1.12;
+    color: var(--bright);
+    text-wrap: balance;
+  }
+  .byline {
+    margin: 0 0 30px;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .lead { font-size: 19px; color: var(--bright); }
+  h2 {
+    margin: 52px 0 14px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    color: var(--bright);
+  }
+  p { margin: 0 0 16px; }
+  ol, ul { margin: 0 0 16px; padding-left: 24px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--bright); }
+  b { color: var(--bright); font-weight: 600; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 2px 6px;
+    overflow-wrap: anywhere;
+  }
+  dl.rows { margin: 0 0 16px; }
+  dl.rows > div {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 6px 24px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+  }
+  dl.rows > div:last-child { border-bottom: 1px solid var(--line); }
+  dt { color: var(--bright); font-weight: 600; }
+  dd { margin: 0; }
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px 40px;
+    font-size: 13px;
+    color: var(--dim);
+  }
+  footer a { color: var(--dim); }
+  @media (max-width: 600px) {
+    dl.rows > div { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="/"><span class="ring"></span>VibeJibe</a></header>
+<main>
+  <h1>Installing VibeJibe</h1>
+  <p class="byline">October 5, 2026 · ChocolateLabs</p>
+
+  <p class="lead">Setup takes about five minutes: create an account, add the Chrome extension, connect it, and send one message to an AI. After that, ChatGPT, Claude, Gemini and Grok all know who you are, and VibeJibe remembers what you say to each of them.</p>
+  <p>VibeJibe is a product of ChocolateLabs. ChocolateLabs is David Chu and Jack Widman.</p>
+
+  <h2>Before you start</h2>
+  <p>You need:</p>
+  <ul>
+    <li>A computer with Google Chrome. The extension is on the Chrome Web Store. A Firefox version is not available yet.</li>
+    <li>An email address and a password of at least 8 characters.</li>
+    <li>An account with at least one of ChatGPT, Claude, Gemini or Grok. Free accounts work.</li>
+  </ul>
+  <p>A phone works for talking to your VibeJibe at app.vibejibe.me. Connecting the four AIs needs the extension, so do the setup on a computer.</p>
+
+  <h2>Step 1. Create your account</h2>
+  <ol>
+    <li>In Chrome, open <a href="https://app.vibejibe.me/signup">app.vibejibe.me/signup</a>.</li>
+    <li>Enter your name, your email and a password of at least 8 characters.</li>
+    <li>Click <b>Create</b>.</li>
+  </ol>
+  <p>You are signed in and the setup screens open. Each screen gives one instruction. Some screens wait until the thing they asked for has happened, then show a confirmation. Click <b>Next</b> to move on.</p>
+  <p>If you leave partway, open <a href="https://app.vibejibe.me/welcome">app.vibejibe.me/welcome</a> to return. Setup resumes at the first step you have not finished.</p>
+
+  <h2>Step 2. Add the extension and connect it</h2>
+  <ol>
+    <li>On the setup screen, click <b>Add to Chrome</b>. The <a href="https://chromewebstore.google.com/detail/jokbboecmpnglmjjchaaaapgelaioklp">VibeJibe page on the Chrome Web Store</a> opens in a new tab.</li>
+    <li>On the store page, click <b>Add to Chrome</b>, then <b>Add extension</b>.</li>
+    <li>Go back to the setup tab and click <b>Next</b>.</li>
+    <li>Click <b>Connect</b>. A page opens that says "Waiting for the extension to answer", then "The extension is connected." It returns you to setup by itself.</li>
+  </ol>
+  <p>Connecting signs the extension in to your account. From then on it sends the messages you write and the replies you get on ChatGPT, Claude, Gemini and Grok to your VibeJibe account. It reads no other sites. The <a href="https://app.vibejibe.me/privacy">privacy policy</a> lists exactly what it reads and writes.</p>
+  <p>Optional: click the puzzle-piece icon in Chrome's toolbar and pin VibeJibe, so its menu is one click away.</p>
+
+  <h2>Step 3. Send a message to an AI</h2>
+  <ol>
+    <li>The setup screen shows four buttons: ChatGPT, Claude, Gemini and Grok. Click one you use.</li>
+    <li>Sign in to that AI if it asks.</li>
+    <li>Start a new chat and send any message.</li>
+    <li>Go back to the setup tab. It says "VibeJibe received your message from" and names the AI.</li>
+  </ol>
+  <p>Repeat for each AI you use. One is enough to finish setup; the others connect the first time you send a message there.</p>
+  <p>If an AI's tab was already open before you added the extension, reload that tab first.</p>
+  <p>The extension saves every message and reply on all four sites. How it tells each AI about you differs:</p>
+  <dl class="rows">
+    <div><dt>ChatGPT</dt><dd>VibeJibe writes a short description of you into ChatGPT's custom instructions. It fills only fields that are empty or that it wrote before.</dd></div>
+    <div><dt>Claude</dt><dd>The description is added to the top of your first message in each new chat. With the direct connection in Step 4, Claude reads from VibeJibe itself and this is skipped.</dd></div>
+    <div><dt>Gemini</dt><dd>The description is added to the top of your first message in each new chat.</dd></div>
+    <div><dt>Grok</dt><dd>The description is added to the top of your first message in each new chat.</dd></div>
+  </dl>
+  <p>On Claude, Gemini and Grok you will see a block starting "Context about me, from my VibeJibe" above your own words in that first message.</p>
+
+  <h2>Step 4. Connect Claude directly (optional)</h2>
+  <p>This step is for people on a paid Claude plan. It lets Claude read from and save to your VibeJibe during a chat, in the browser and in Claude's own apps. Click <b>Skip</b> on the setup screen to pass over it.</p>
+  <ol>
+    <li>In <a href="https://claude.ai/">Claude</a>, open <b>Customize</b>, then <b>Connectors</b>.</li>
+    <li>Click <b>Add custom connector</b>.</li>
+    <li>Enter <b>VibeJibe</b> as the name and this as the address: <code>https://mcp.vibejibe.me/mcp</code>. The setup screen has a button that copies the address.</li>
+    <li>Click <b>Connect</b>. A VibeJibe page opens. Click <b>Allow</b>.</li>
+    <li>Go back to the setup tab. It confirms that Claude is connected to your account.</li>
+  </ol>
+
+  <h2>Step 5. Finish</h2>
+  <p>The last screen says "Setup is finished." Click <b>Open VibeJibe</b>. This is your VibeJibe's own window at <a href="https://app.vibejibe.me">app.vibejibe.me</a>. Tell it about yourself and what you are working on. What it learns here reaches the other AIs.</p>
+
+  <h2>Check that it works</h2>
+  <ol>
+    <li>Click the VibeJibe icon in Chrome's toolbar. The menu says "Signed in as" with your name, and lists each AI under "Seen in this browser".</li>
+    <li>Ask one AI something specific, for example "What is the capital of Mongolia?" in Gemini.</li>
+    <li>Open <a href="https://app.vibejibe.me">app.vibejibe.me</a> and ask "What did I just ask Gemini?" It answers from what the extension saved.</li>
+    <li>Start a new chat in a different AI and ask "What do you know about me?" It answers from your description.</li>
+  </ol>
+
+  <h2>Other places you can use VibeJibe</h2>
+  <dl class="rows">
+    <div><dt>Phone</dt><dd>Open app.vibejibe.me in the phone's browser and sign in. You can talk to your VibeJibe there.</dd></div>
+    <div><dt>A second computer</dt><dd>Add the extension in Chrome there, click its icon, then <b>Connect this browser</b>.</dd></div>
+    <div><dt>Claude Code</dt><dd>Run <code>claude mcp add --scope user --transport http vibejibe https://mcp.vibejibe.me/mcp</code>, then sign in when the browser opens.</dd></div>
+    <div><dt>Any other AI</dt><dd>On your <a href="https://app.vibejibe.me/account">account page</a>, copy the text under "Your description" and paste it into that AI's custom instructions.</dd></div>
+  </dl>
+
+  <h2>Turning it off or removing it</h2>
+  <dl class="rows">
+    <div><dt>Stop VibeJibe describing you to the AIs</dt><dd>Click the VibeJibe icon and untick "Tell each AI who I am at the start of a new chat". Text already written into ChatGPT's custom instructions stays there until you delete it in ChatGPT's settings.</dd></div>
+    <div><dt>Disconnect this browser</dt><dd>Click the VibeJibe icon, then <b>Sign out</b>.</dd></div>
+    <div><dt>Remove the extension</dt><dd>Right-click the VibeJibe icon and choose <b>Remove from Chrome</b>. All reading and writing by the extension stops.</dd></div>
+    <div><dt>Erase what VibeJibe knows</dt><dd>On your <a href="https://app.vibejibe.me/account">account page</a>, go to <b>Start from scratch</b>, type <code>start over</code> and confirm. Two tick boxes there also remove the extension and delete the account. This cannot be undone.</dd></div>
+  </dl>
+
+  <h2>If something goes wrong</h2>
+  <dl class="rows">
+    <div><dt>"The extension did not answer. It is not installed in this browser."</dt><dd>The extension is missing from this Chrome profile. Add it from the Chrome Web Store, then click <b>Connect</b> again.</dd></div>
+    <div><dt>Setup keeps waiting after you sent a message</dt><dd>Reload the AI's tab and send a message in a new chat. Check that the VibeJibe menu says "Signed in as". If it says "Not connected yet", click <b>Connect this browser</b>.</dd></div>
+    <div><dt>"The VibeJibe extension for Firefox is not available yet."</dt><dd>Open app.vibejibe.me in Chrome and do the setup there.</dd></div>
+    <div><dt>"There is already a VibeJibe for that email."</dt><dd>You have an account. Click <b>Sign in</b>.</dd></div>
+    <div><dt>You forgot your password</dt><dd>There is no reset page yet. Write to the contact address on the <a href="https://app.vibejibe.me/privacy">privacy policy</a> page.</dd></div>
+  </dl>
+</main>
+<footer>&copy; 2026 VibeJibe · <a href="https://app.vibejibe.me/privacy">Privacy</a></footer>
+</body>
+</html>
