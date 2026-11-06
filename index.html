@@ -124,6 +124,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
  .club{height:260px}
 }
 </style>
+<script src="/a.js" defer></script>
 </head>
 <body>
 <div class="sky"></div>
@@ -213,6 +214,7 @@ document.querySelectorAll('form.join').forEach(function (form) {
     fetch('https://app.vibejibe.me/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email }) })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok) throw { shown: d.error }; }); })
       .then(function () {
+        (window.vjq = window.vjq || []).push(['event', 'join_waitlist']);
         document.querySelectorAll('form.join').forEach(function (f) {
           f.classList.add('done');
           f.innerHTML = '<b>You are on the list.</b><p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + ' when the clubs open.</p>';
