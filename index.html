@@ -210,14 +210,14 @@ document.querySelectorAll('form.join').forEach(function (form) {
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) { say('That does not look like an email address.'); input.focus(); return; }
     button.disabled = true;
     fetch('https://app.vibejibe.me/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email }) })
-      .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.error || ''); }); })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok) throw { shown: d.error }; }); })
       .then(function () {
         document.querySelectorAll('form.join').forEach(function (f) {
           f.classList.add('done');
           f.innerHTML = '<b>You are on the list.</b><p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + ' when the clubs open.</p>';
         });
       })
-      .catch(function (err) { button.disabled = false; say(err.message || 'That did not go through. Please try again.'); });
+      .catch(function (err) { button.disabled = false; say((err && err.shown) || 'That did not go through. Please try again in a little while.'); });
   });
 });
 </script>
