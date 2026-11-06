@@ -61,6 +61,7 @@ h1 em{font-style:normal;display:inline-block;padding-right:.08em;background:line
 .join input::placeholder{color:#8fa5ab}
 .join .fine{flex-basis:100%;margin:4px 0 0}
 .join .fine.bad{color:var(--pink)}
+.pp{border-bottom:1px solid}
 .join.done{display:block}
 .join.done b{display:block;font-family:Caveat,cursive;font-size:2.4rem;line-height:1.1;color:var(--pink);transform:rotate(-2deg);transform-origin:left;animation:rise .7s ease-out both}
 .close .join{margin:0 auto;justify-content:center}.close .join.done b{transform-origin:center}
@@ -190,13 +191,13 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
     <form class="join" novalidate>
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
         <button class="cta" type="submit">Join the waiting list</button>
-        <p class="fine" role="status">Your email is used for one thing: telling you the clubs are open.</p>
+        <p class="fine" role="status">Your email is used for one thing: telling you the clubs are open. <a class="pp" href="/privacy/">Privacy</a></p>
       </form>
   </section>
 
   <footer>
     <span>&copy; 2026 ChocolateLabs</span>
-    <a href="mailto:woof@chocolatelabs.me">woof@chocolatelabs.me</a>
+    <span><a href="/privacy/">Privacy</a><a href="mailto:woof@chocolatelabs.me">woof@chocolatelabs.me</a></span>
   </footer>
 </div>
 <script>
