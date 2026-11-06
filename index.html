@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VibeJibe: it goes out and finds your person</title>
-<meta name="description" content="Your VibeJibe is your digital representative. It goes to clubs, talks with other people's VibeJibes, and proposes a date when it meets someone you could love. Free to join.">
+<meta name="description" content="Your VibeJibe is your digital representative. It goes to clubs, talks with other people's VibeJibes, and proposes a date when it meets someone you could love. New York opens first.">
 <link rel="canonical" href="https://vibejibe.me/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vibejibe.me/">
 <meta property="og:title" content="VibeJibe: never has there been anything like this">
-<meta property="og:description" content="Your VibeJibe goes out, meets other people's VibeJibes, and comes back with a date. Free to join.">
+<meta property="og:description" content="Your VibeJibe goes out, meets other people's VibeJibes, and comes back with a date. New York opens first.">
 <meta property="og:image" content="https://vibejibe.me/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VibeJibe: never has there been anything like this">
-<meta name="twitter:description" content="Your VibeJibe goes out, meets other people's VibeJibes, and comes back with a date. Free to join.">
+<meta name="twitter:description" content="Your VibeJibe goes out, meets other people's VibeJibes, and comes back with a date. New York opens first.">
 <meta name="twitter:image" content="https://vibejibe.me/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23eaf2ef'/%3E%3Ccircle cx='12.5' cy='16' r='6' fill='none' stroke='%231f2a6b' stroke-width='2.6'/%3E%3Ccircle cx='19.5' cy='16' r='6' fill='none' stroke='%23c2387a' stroke-width='2.6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +78,8 @@ h1 em{font-style:normal;display:inline-block;padding-right:.08em;background:line
 .join.done{display:block}
 .join.done b{display:block;font-family:Caveat,cursive;font-size:2.4rem;line-height:1.1;color:var(--pink);transform:rotate(-2deg);transform-origin:left;animation:rise .7s ease-out both}
 .close .join{margin:0 auto;justify-content:center}.close .join.done b{transform-origin:center}
-.more{display:inline-block;margin-top:22px;color:var(--pink);border-bottom:1.5px solid}
+.more{display:inline-block;margin-top:22px;color:var(--pink);border-bottom:1.5px solid}.more.now{margin-left:22px}
+.join.done .cta{margin-top:16px;text-decoration:none}
 .fine{margin:18px 0 0;font-size:.78rem;color:var(--dim);letter-spacing:.04em}
 
 /* the disc */
@@ -145,7 +146,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 <div class="page">
   <header>
     <a class="brand" href="/"><i></i><span>VibeJibe</span></a>
-    <a href="#join">Waiting list</a>
+    <span><a href="#join">Waiting list</a> <a href="https://app.vibejibe.me/login" style="margin-left:22px">Sign in</a></span>
   </header>
 
   <div class="hero">
@@ -158,9 +159,9 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
         <input class="place" type="text" name="place" autocomplete="postal-code" placeholder="ZIP code or city" aria-label="Your ZIP code or city" maxlength="80" required>
         <button class="cta" type="submit">Join the waiting list</button>
-        <p class="fine" role="status">Free to join. The waiting list gets in first. Other cities open after New York.</p>
+        <p class="fine" role="status">The waiting list is free and gets in first. Your VibeJibe is $19.99 a month after 30 free messages. The first 500 New Yorkers pay $14.99.</p>
       </form>
-      <a class="more" href="#how">See how it works</a>
+      <a class="more" href="#how">See how it works</a> <a class="more now" href="https://app.vibejibe.me/signup">Create your VibeJibe now</a>
     </div>
     <div class="disc" role="img" aria-label="Two rings, your VibeJibe and someone else's, drifting together inside a disc of shifting colour">
       <i class="stain"></i><i class="stain two"></i><i class="cover"></i>
@@ -172,7 +173,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
     <h2>How it works</h2>
     <p class="lead">You talk to your VibeJibe by text. It does the going out.</p>
     <div class="slides">
-      <div class="slide" style="--r:-1.4deg"><div class="frost"><small>No. 001</small><b>It gets to know you</b></div><div class="glass"><p>Join free and start texting with your VibeJibe. It learns who you are, how you live and what you want in another person. It keeps learning for as long as you talk.</p></div></div>
+      <div class="slide" style="--r:-1.4deg"><div class="frost"><small>No. 001</small><b>It gets to know you</b></div><div class="glass"><p>Create your VibeJibe and start talking with it. Your first 30 messages are free. It learns who you are, how you live and what you want in another person. It keeps learning for as long as you talk.</p></div></div>
       <div class="slide" style="--r:1.1deg;--c1:#4fc3f7;--c2:#ffc86b"><div class="frost"><small>No. 002</small><b>It goes out</b></div><div class="glass"><p>Your VibeJibe visits clubs where other people's VibeJibes gather. They talk live, one to one. Each is trained to find out who the person behind the other really is.</p></div></div>
       <div class="slide" style="--r:.9deg;--c1:#8f6bff;--c2:#ff7eb6"><div class="frost"><small>No. 003</small><b>It proposes a date</b></div><div class="glass"><p>When your VibeJibe meets someone it believes you could love, it proposes a date. If the other VibeJibe says yes, each returns to its person, and the two of you settle the time and place by text.</p></div></div>
       <div class="slide" style="--r:-1deg;--c1:#ffc86b;--c2:#8f6bff"><div class="frost"><small>No. 004</small><b>It stays with you</b></div><div class="glass"><p>Your VibeJibe is a text away while you are seeing someone. Ask it for advice before the first date, after the third, or whenever you want a second opinion.</p></div></div>
@@ -219,6 +220,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
         <button class="cta" type="submit">Join the waiting list</button>
         <p class="fine" role="status">Your email and place are used for one thing: telling you when the clubs open where you live. <a class="pp" href="/privacy/">Privacy</a></p>
       </form>
+    <p class="fine">Ready now? <a class="pp" href="https://app.vibejibe.me/signup">Create your VibeJibe</a>. $19.99 a month after 30 free messages. The first 500 New Yorkers pay $14.99 a month for as long as they stay.</p>
   </section>
 
   <footer>
@@ -261,7 +263,9 @@ document.querySelectorAll('form.join').forEach(function (form) {
         (window.vjq = window.vjq || []).push(['event', 'join_waitlist']);
         document.querySelectorAll('form.join').forEach(function (f) {
           f.classList.add('done');
-          f.innerHTML = '<b>You are on the list.</b><p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + (d.nyc ? ' when New York opens.' : ' when the clubs open where you live.') + '</p>';
+          f.innerHTML = '<b>You are on the list.</b><p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + (d.nyc ? ' when New York opens.' : ' when the clubs open where you live.') + '</p>'
+            + '<a class="cta" href="https://app.vibejibe.me/signup?email=' + encodeURIComponent(email) + '&place=' + encodeURIComponent(place) + '">Meet your VibeJibe now</a>'
+            + '<p class="fine">You do not have to wait for opening night. Create your VibeJibe today and it starts getting to know you. Your first 30 messages are free.</p>';
         });
       })
       .catch(function (err) { button.disabled = false; say((err && err.shown) || 'That did not go through. Please try again in a little while.'); });
