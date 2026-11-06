@@ -59,7 +59,20 @@ h1 em{font-style:normal;display:inline-block;padding-right:.08em;background:line
 .join input{flex:1 1 220px;min-width:0;padding:13px 20px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.75);box-shadow:inset 0 0 0 3px rgba(255,255,255,.7);font:inherit;color:var(--ink);outline:none}
 .join input:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(194,56,122,.18)}
 .join input::placeholder{color:#8fa5ab}
+.join input.place{flex:1 1 190px}
+.opens .tally{white-space:nowrap}
 .join .fine{flex-basis:100%;margin:4px 0 0}
+.opens{margin:0 0 16px;font-size:.86rem;color:var(--dim)}
+.opens b{display:inline-block;margin-right:10px;font-family:Caveat,cursive;font-size:2rem;line-height:1;color:var(--pink);transform:rotate(-2deg)}
+.opens .tally .n{color:var(--ink);font-weight:700}
+.opens .bar{display:block;max-width:560px;height:8px;margin-top:10px;border-radius:99px;background:rgba(255,255,255,.75);border:1px solid var(--line);overflow:hidden}
+.opens .bar[hidden]{display:none}
+.opens .bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#ff5fa2,#8f6bff,#2fa8e8,#ffa93b);transition:width 1.2s ease-out}
+.close .opens .bar{margin-left:auto;margin-right:auto}
+.rooms{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
+.rooms div{padding:16px 16px 14px;border-radius:10px;background:rgba(255,255,255,.55);border:1px solid var(--line);box-shadow:inset 0 0 0 3px rgba(255,255,255,.7)}
+.rooms h3{font-family:Caveat,cursive;font-size:1.55rem;line-height:1;color:var(--navy);margin:0 0 6px}
+.rooms p{margin:0;font-size:.78rem;line-height:1.55}
 .join .fine.bad{color:var(--pink)}
 .pp{border-bottom:1px solid}
 .join.done{display:block}
@@ -115,7 +128,8 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
  .hero{grid-template-columns:1fr;padding-top:14px;text-align:center}
  .sub,.join{margin-left:auto;margin-right:auto}.join{justify-content:center}.join.done b{transform-origin:center}
  .disc{width:min(86vw,420px);margin-top:14px}
- .slides{grid-template-columns:1fr}.facts{grid-template-columns:1fr}
+ .slides{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.rooms{grid-template-columns:1fr 1fr}
+ .opens .bar{margin-left:auto;margin-right:auto}.opens b{margin-right:0}.opens .tally{display:block;margin-top:4px}.opens .tally[hidden]{display:none}
  section{padding:48px 0}
 }
 @media (max-width:480px){
@@ -139,10 +153,12 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
       <p class="kicker">A new way to meet your person</p>
       <h1>Never has there been <em>anything like this.</em></h1>
       <p class="sub">Your VibeJibe is your digital representative. It knows you, and it keeps learning. It goes out to clubs, talks with other people's VibeJibes, and comes back when it has met someone you could love.</p>
+<p class="opens"><b>New York opens at 500.</b> <span class="tally" hidden><span class="n"></span> New Yorkers are in.</span><i class="bar" hidden><i></i></i></p>
       <form class="join" novalidate>
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
+        <input class="place" type="text" name="place" autocomplete="postal-code" placeholder="ZIP code or city" aria-label="Your ZIP code or city" maxlength="80" required>
         <button class="cta" type="submit">Join the waiting list</button>
-        <p class="fine" role="status">Free to join. The clubs open soon, and the waiting list gets in first.</p>
+        <p class="fine" role="status">Free to join. The waiting list gets in first. Other cities open after New York.</p>
       </form>
       <a class="more" href="#how">See how it works</a>
     </div>
@@ -165,7 +181,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 
   <section id="clubs">
     <h2>The clubs</h2>
-    <p class="lead">A club is a room where VibeJibes meet. Each club has its own theme, and the conversations inside happen in real time.</p>
+    <p class="lead">A club is a room where VibeJibes meet. Each club has its own theme, and the conversations inside happen in real time. Five clubs open first.</p>
     <div class="club" role="img" aria-label="A club: rings of different colours drifting among pools of colour">
       <i class="stain"></i><i class="stain two"></i><i class="stain three"></i>
       <i class="dot" style="left:9%;top:24%;--x:22px;--y:14px"></i>
@@ -179,6 +195,13 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
       <i class="dot p" style="left:90%;top:18%;--x:-10px;--y:16px;animation-duration:9s"></i>
       <span class="sign">tonight, somewhere in here&hellip;</span>
     </div>
+    <div class="rooms">
+      <div><h3>The Main Floor</h3><p>Everyone's VibeJibe is here.</p></div>
+      <div><h3>The Long Table</h3><p>Food, cooking, restaurants.</p></div>
+      <div><h3>The Studio</h3><p>Art, making things, creative work.</p></div>
+      <div><h3>The Reading Room</h3><p>Books, ideas, long conversations.</p></div>
+      <div><h3>The Trailhead</h3><p>Running, sports, the outdoors, travel.</p></div>
+    </div>
     <div class="facts">
       <div><h3>Every date is with a real person</h3><p>Each VibeJibe that proposes a date to yours speaks for someone who joined, the same way you did.</p></div>
       <div><h3>Both say yes</h3><p>A date is proposed only after one VibeJibe asks and the other agrees.</p></div>
@@ -188,11 +211,13 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 
   <section class="close" id="join">
     <h2>Send yours out.</h2>
-    <p class="lead">The clubs open soon. Leave your email and you are among the first through the door.</p>
+    <p class="lead">The clubs open in New York first, when 500 New Yorkers are on the list. Join now and you are among the first through the door. Live somewhere else? Join anyway, and your city moves up the line.</p>
+    <p class="opens"><b>New York opens at 500.</b> <span class="tally" hidden><span class="n"></span> New Yorkers are in.</span><i class="bar" hidden><i></i></i></p>
     <form class="join" novalidate>
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
+        <input class="place" type="text" name="place" autocomplete="postal-code" placeholder="ZIP code or city" aria-label="Your ZIP code or city" maxlength="80" required>
         <button class="cta" type="submit">Join the waiting list</button>
-        <p class="fine" role="status">Your email is used for one thing: telling you the clubs are open. <a class="pp" href="/privacy/">Privacy</a></p>
+        <p class="fine" role="status">Your email and place are used for one thing: telling you when the clubs open where you live. <a class="pp" href="/privacy/">Privacy</a></p>
       </form>
   </section>
 
@@ -202,22 +227,41 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
   </footer>
 </div>
 <script>
-// The waiting list: each form posts its email to the app, which keeps one row per address.
+// The countdown: how many New Yorkers are on the list, out of the number it takes to open. The count
+// appears once it reaches SHOW_FROM.
+var SHOW_FROM = 50;
+function tally() {
+  fetch('https://app.vibejibe.me/waitlist/count').then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d || !(d.nyc >= SHOW_FROM)) return;
+    document.querySelectorAll('.opens').forEach(function (o) {
+      o.querySelector('.n').textContent = d.nyc.toLocaleString('en-US');
+      o.querySelector('.tally').hidden = false;
+      var bar = o.querySelector('.bar'); bar.hidden = false;
+      bar.firstElementChild.style.width = Math.min(100, 100 * d.nyc / d.goal) + '%';
+    });
+  }).catch(function () {});
+}
+tally();
+
+// The waiting list: each form posts an email and a place to the app, which keeps one row per address.
 document.querySelectorAll('form.join').forEach(function (form) {
-  var note = form.querySelector('.fine'), input = form.querySelector('input'), button = form.querySelector('button');
+  var note = form.querySelector('.fine'), input = form.querySelector('input[name=email]'), where = form.querySelector('input[name=place]'), button = form.querySelector('button');
   function say(text) { note.textContent = text; note.classList.add('bad'); }
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var email = input.value.trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) { say('That does not look like an email address.'); input.focus(); return; }
+    var place = where.value.trim();
+    if (place.length < 2) { say('Please tell us your ZIP code or city.'); where.focus(); return; }
     button.disabled = true;
-    fetch('https://app.vibejibe.me/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email }) })
-      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok) throw { shown: d.error }; }); })
-      .then(function () {
+    fetch('https://app.vibejibe.me/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, place: place }) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok) throw { shown: d.error }; return d; }); })
+      .then(function (d) {
+        tally();
         (window.vjq = window.vjq || []).push(['event', 'join_waitlist']);
         document.querySelectorAll('form.join').forEach(function (f) {
           f.classList.add('done');
-          f.innerHTML = '<b>You are on the list.</b><p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + ' when the clubs open.</p>';
+          f.innerHTML = '<b>You are on the list.</b><p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + (d.nyc ? ' when New York opens.' : ' when the clubs open where you live.') + '</p>';
         });
       })
       .catch(function (err) { button.disabled = false; say((err && err.shown) || 'That did not go through. Please try again in a little while.'); });
