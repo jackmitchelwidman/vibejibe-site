@@ -158,12 +158,12 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
       <p class="kicker">A new way to meet your person</p>
       <h1>Never has there been <em>anything like this.</em></h1>
       <p class="sub">Your VibeJibe is your digital representative for Dating. It knows you, and it keeps learning. It goes out to clubs, talks with other people's VibeJibes, and comes back when it has met someone you could love.</p>
-<p class="opens"><b>New York opens at 500.</b> <span class="tally" hidden><span class="n"></span> New Yorkers are in.</span><i class="bar" hidden><i></i></i></p>
+<p class="opens"><b>New York opens at 500.</b> <span class="tally" hidden><span class="n"></span> people are in.</span><i class="bar" hidden><i></i></i></p>
       <form class="join" novalidate>
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
         <input class="place" type="text" name="place" autocomplete="postal-code" placeholder="ZIP code or city" aria-label="Your ZIP code or city" maxlength="80" required>
         <button class="cta" type="submit">Join the waiting list</button>
-        <p class="fine" role="status">The waiting list is free and gets in first. Your VibeJibe is $19.99 a month after 30 free messages. The first 500 New Yorkers to create their VibeJibe pay $14.99.<span class="left"></span></p>
+        <p class="fine" role="status">The waiting list is free and gets in first. Your VibeJibe is $19.99 a month after 30 free messages. The first 500 people in and around New York City to create their VibeJibe pay $14.99.<span class="left"></span></p>
       </form>
       <a class="more" href="#how">See how it works</a>
     </div>
@@ -216,8 +216,8 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 
   <section class="close" id="join">
     <h2>Send yours out.</h2>
-    <p class="lead">The clubs open in New York first, when 500 New Yorkers are on the list. Join now and you are among the first through the door. Live somewhere else? Join anyway, and your city moves up the line.</p>
-    <p class="opens"><b>New York opens at 500.</b> <span class="tally" hidden><span class="n"></span> New Yorkers are in.</span><i class="bar" hidden><i></i></i></p>
+    <p class="lead">The clubs open in New York first, when 500 people in and around the city are on the list. New York means the five boroughs and the towns close to them: Nassau County, southern Westchester, and across the Hudson from Jersey City and Hoboken up to Fort Lee and Hackensack. Join now and you are among the first through the door. Live somewhere else? Join anyway, and your city moves up the line.</p>
+    <p class="opens"><b>New York opens at 500.</b> <span class="tally" hidden><span class="n"></span> people are in.</span><i class="bar" hidden><i></i></i></p>
     <form class="join" novalidate>
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
         <input class="place" type="text" name="place" autocomplete="postal-code" placeholder="ZIP code or city" aria-label="Your ZIP code or city" maxlength="80" required>
@@ -232,7 +232,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
   </footer>
 </div>
 <script>
-// The countdown: how many New Yorkers are on the list, out of the number it takes to open. The count
+// The countdown: how many people in the New York area are on the list, out of the number it takes to open. The count
 // appears once it reaches SHOW_FROM. The price line also says how many founding-price places are left.
 var APP = 'https://app.vibejibe.me', SHOW_FROM = 50;
 function tally() {
@@ -264,15 +264,15 @@ function tag(v) { return (v || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').sli
   if (r && !keep('vj_r')) keep('vj_r', r);
 })();
 
-// After joining: the person's own link to send to friends, and how many New Yorkers it has brought.
+// After joining: the person's own link to send to friends, and how many people in the New York area it has brought.
 function joined(code, nyc, email, place) {
   var link = 'https://vibejibe.me/?r=' + code;
-  var words = 'My VibeJibe is going out to find me a date. It talks with other people\'s VibeJibes and comes back when it has met someone I could love. New York opens when 500 New Yorkers are on the list. Join here:';
+  var words = 'My VibeJibe is going out to find me a date. It talks with other people\'s VibeJibes and comes back when it has met someone I could love. New York opens when 500 people in and around the city are on the list. Join here:';
   document.querySelectorAll('form.join').forEach(function (f) {
     f.classList.add('done');
     f.innerHTML = '<b>You are on the list.</b>'
       + (email ? '<p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + (nyc ? ' when New York opens.' : ' when the clubs open where you live.') + '</p>' : '')
-      + '<p class="fine">' + (nyc ? 'Every New Yorker you bring opens New York sooner, and puts one more person in the room who could be yours.' : 'Every person you bring from your city moves it up the line.') + ' This is your link to send to friends:</p>'
+      + '<p class="fine">' + (nyc ? 'Every person you bring from in or around New York opens it sooner, and puts one more person in the room who could be yours.' : 'Every person you bring from your city moves it up the line.') + ' This is your link to send to friends:</p>'
       + '<div class="share"><input type="text" readonly aria-label="Your link to send to friends" value="' + link + '"><button type="button" class="copy">Copy link</button>'
       + (navigator.share ? '<button type="button" class="send">Send it</button>' : '') + '</div>'
       + '<p class="fine brought" role="status"></p>'
@@ -294,7 +294,7 @@ function joined(code, nyc, email, place) {
   fetch(APP + '/waitlist/brought?c=' + encodeURIComponent(code)).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
     if (!d) return;
     document.querySelectorAll('.brought').forEach(function (e) {
-      e.textContent = d.nyc === 0 ? 'You have not brought anyone yet.' : 'You have brought ' + d.nyc + (d.nyc === 1 ? ' New Yorker.' : ' New Yorkers.');
+      e.textContent = d.nyc === 0 ? 'You have not brought anyone yet.' : 'You have brought ' + d.nyc + (d.nyc === 1 ? ' person' : ' people') + ' from the New York area.';
     });
   }).catch(function () {});
 }
