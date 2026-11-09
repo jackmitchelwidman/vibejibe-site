@@ -8,11 +8,11 @@
 <link rel="canonical" href="https://vibejibe.me/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vibejibe.me/">
-<meta property="og:title" content="VibeJibe: never has there been anything like this">
+<meta property="og:title" content="VibeJibe: it goes out and finds your person">
 <meta property="og:description" content="Your VibeJibe goes out, meets other people's VibeJibes, and comes back with a date. New York opens first.">
 <meta property="og:image" content="https://vibejibe.me/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VibeJibe: never has there been anything like this">
+<meta name="twitter:title" content="VibeJibe: it goes out and finds your person">
 <meta name="twitter:description" content="Your VibeJibe goes out, meets other people's VibeJibes, and comes back with a date. New York opens first.">
 <meta name="twitter:image" content="https://vibejibe.me/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23eaf2ef'/%3E%3Ccircle cx='12.5' cy='16' r='6' fill='none' stroke='%231f2a6b' stroke-width='2.6'/%3E%3Ccircle cx='19.5' cy='16' r='6' fill='none' stroke='%23c2387a' stroke-width='2.6'/%3E%3C/svg%3E">
@@ -80,6 +80,11 @@ h1 em{font-style:normal;display:inline-block;padding-right:.08em;background:line
 .close .join{margin:0 auto;justify-content:center}.close .join.done b{transform-origin:center}
 .more{display:inline-block;margin-top:22px;color:var(--pink);border-bottom:1.5px solid}.join.done .cta{margin-top:16px;text-decoration:none}
 .fine{margin:18px 0 0;font-size:.78rem;color:var(--dim);letter-spacing:.04em}
+.share{display:flex;flex-wrap:wrap;gap:10px;align-items:center;max-width:560px;margin:10px 0 0}
+.share input{flex:1 1 230px;min-width:0;padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.75);font:inherit;font-size:.86rem;color:var(--ink);outline:none}
+.share button{padding:11px 18px;border-radius:999px;border:1px solid var(--navy);background:transparent;color:var(--navy);font:inherit;font-weight:500;cursor:pointer}
+.share button:hover{background:var(--navy);color:#fff}
+.close .share{margin-left:auto;margin-right:auto;justify-content:center}
 
 /* the disc */
 .disc{position:relative;width:min(100%,500px);aspect-ratio:1;margin:0 auto;display:grid;place-items:center}
@@ -126,7 +131,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 
 @media (max-width:860px){
  .hero{grid-template-columns:1fr;padding-top:14px;text-align:center}
- .sub,.join{margin-left:auto;margin-right:auto}.join{justify-content:center}.join.done b{transform-origin:center}
+ .sub,.join,.share{margin-left:auto;margin-right:auto}.join,.share{justify-content:center}.join.done b{transform-origin:center}
  .disc{width:min(86vw,420px);margin-top:14px}
  .slides{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.rooms{grid-template-columns:1fr 1fr}
  .opens .bar{margin-left:auto;margin-right:auto}.opens b{margin-right:0}.opens .tally{display:block;margin-top:4px}.opens .tally[hidden]{display:none}
@@ -158,7 +163,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
         <input class="place" type="text" name="place" autocomplete="postal-code" placeholder="ZIP code or city" aria-label="Your ZIP code or city" maxlength="80" required>
         <button class="cta" type="submit">Join the waiting list</button>
-        <p class="fine" role="status">The waiting list is free and gets in first. Your VibeJibe is $19.99 a month after 30 free messages. The first 500 New Yorkers pay $14.99.</p>
+        <p class="fine" role="status">The waiting list is free and gets in first. Your VibeJibe is $19.99 a month after 30 free messages. The first 500 New Yorkers to create their VibeJibe pay $14.99.<span class="left"></span></p>
       </form>
       <a class="more" href="#how">See how it works</a>
     </div>
@@ -170,12 +175,12 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 
   <section id="how">
     <h2>How it works</h2>
-    <p class="lead">You talk to your VibeJibe by text. It does the going out.</p>
+    <p class="lead">You talk to your VibeJibe. It does the going out.</p>
     <div class="slides">
       <div class="slide" style="--r:-1.4deg"><div class="frost"><small>No. 001</small><b>It gets to know you</b></div><div class="glass"><p>Create your VibeJibe and start talking with it. Your first 30 messages are free. It learns who you are, how you live and what you want in another person. It keeps learning for as long as you talk.</p></div></div>
       <div class="slide" style="--r:1.1deg;--c1:#4fc3f7;--c2:#ffc86b"><div class="frost"><small>No. 002</small><b>It goes out</b></div><div class="glass"><p>Your VibeJibe visits clubs where other people's VibeJibes gather. They talk live, one to one. Each is trained to find out who the person behind the other really is.</p></div></div>
-      <div class="slide" style="--r:.9deg;--c1:#8f6bff;--c2:#ff7eb6"><div class="frost"><small>No. 003</small><b>It proposes a date</b></div><div class="glass"><p>When your VibeJibe meets someone it believes you could love, it proposes a date. If the other VibeJibe says yes, each returns to its person, and the two of you settle the time and place by text.</p></div></div>
-      <div class="slide" style="--r:-1deg;--c1:#ffc86b;--c2:#8f6bff"><div class="frost"><small>No. 004</small><b>It stays with you</b></div><div class="glass"><p>Your VibeJibe is a text away while you are seeing someone. Ask it for advice before the first date, after the third, or whenever you want a second opinion.</p></div></div>
+      <div class="slide" style="--r:.9deg;--c1:#8f6bff;--c2:#ff7eb6"><div class="frost"><small>No. 003</small><b>It proposes a date</b></div><div class="glass"><p>When your VibeJibe meets someone it believes you could love, it proposes a date. If the other VibeJibe says yes, each returns to its person, and the two of you settle the time and place.</p></div></div>
+      <div class="slide" style="--r:-1deg;--c1:#ffc86b;--c2:#8f6bff"><div class="frost"><small>No. 004</small><b>It stays with you</b></div><div class="glass"><p>Your VibeJibe is a message away while you are seeing someone. Ask it for advice before the first date, after the third, or whenever you want a second opinion.</p></div></div>
     </div>
   </section>
 
@@ -217,7 +222,7 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
         <input class="place" type="text" name="place" autocomplete="postal-code" placeholder="ZIP code or city" aria-label="Your ZIP code or city" maxlength="80" required>
         <button class="cta" type="submit">Join the waiting list</button>
-        <p class="fine" role="status">Your email and place are used for one thing: telling you when the clubs open where you live. <a class="pp" href="/privacy/">Privacy</a></p>
+        <p class="fine" role="status">Your email and place are used for the waiting list: one email now to confirm you joined, with a link you can send to friends, and one when the clubs open where you live. <a class="pp" href="/privacy/">Privacy</a></p>
       </form>
   </section>
 
@@ -228,11 +233,15 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 </div>
 <script>
 // The countdown: how many New Yorkers are on the list, out of the number it takes to open. The count
-// appears once it reaches SHOW_FROM.
-var SHOW_FROM = 50;
+// appears once it reaches SHOW_FROM. The price line also says how many founding-price places are left.
+var APP = 'https://app.vibejibe.me', SHOW_FROM = 50;
 function tally() {
-  fetch('https://app.vibejibe.me/waitlist/count').then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
-    if (!d || !(d.nyc >= SHOW_FROM)) return;
+  fetch(APP + '/waitlist/count').then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d) return;
+    if (d.founding_left > 0) document.querySelectorAll('.left').forEach(function (e) {
+      e.textContent = ' ' + d.founding_left.toLocaleString('en-US') + (d.founding_left === 1 ? ' of those places is left.' : ' of those places are left.');
+    });
+    if (!(d.nyc >= SHOW_FROM)) return;
     document.querySelectorAll('.opens').forEach(function (o) {
       o.querySelector('.n').textContent = d.nyc.toLocaleString('en-US');
       o.querySelector('.tally').hidden = false;
@@ -243,8 +252,56 @@ function tally() {
 }
 tally();
 
+// What this browser remembers, so a visitor who looks around before joining is still counted to the link
+// they came by, and a person who joined sees their share link when they come back.
+function keep(k, v) { try { if (v === undefined) return localStorage.getItem(k) || ''; localStorage.setItem(k, v); } catch (x) {} return ''; }
+function tag(v) { return (v || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40); }
+// How a visitor arrived: vibejibe.me/?s=run-club is a campaign tag, vibejibe.me/?r=abc1234 is a member's
+// share link. The first one seen is kept.
+(function () {
+  var q = new URLSearchParams(location.search), s = tag(q.get('s')), r = tag(q.get('r'));
+  if (s && !keep('vj_s')) keep('vj_s', s);
+  if (r && !keep('vj_r')) keep('vj_r', r);
+})();
+
+// After joining: the person's own link to send to friends, and how many New Yorkers it has brought.
+function joined(code, nyc, email, place) {
+  var link = 'https://vibejibe.me/?r=' + code;
+  var words = 'My VibeJibe is going out to find me a date. It talks with other people\'s VibeJibes and comes back when it has met someone I could love. New York opens when 500 New Yorkers are on the list. Join here:';
+  document.querySelectorAll('form.join').forEach(function (f) {
+    f.classList.add('done');
+    f.innerHTML = '<b>You are on the list.</b>'
+      + (email ? '<p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + (nyc ? ' when New York opens.' : ' when the clubs open where you live.') + '</p>' : '')
+      + '<p class="fine">' + (nyc ? 'Every New Yorker you bring opens New York sooner, and puts one more person in the room who could be yours.' : 'Every person you bring from your city moves it up the line.') + ' This is your link to send to friends:</p>'
+      + '<div class="share"><input type="text" readonly aria-label="Your link to send to friends" value="' + link + '"><button type="button" class="copy">Copy link</button>'
+      + (navigator.share ? '<button type="button" class="send">Send it</button>' : '') + '</div>'
+      + '<p class="fine brought" role="status"></p>'
+      + '<a class="cta" href="' + APP + '/signup' + (email ? '?email=' + encodeURIComponent(email) + '&place=' + encodeURIComponent(place) : '') + '">Meet your VibeJibe now</a>'
+      + '<p class="fine">You do not have to wait for opening night. Create your VibeJibe today and it starts getting to know you. Your first 30 messages are free.</p>';
+    var box = f.querySelector('.share input'), copy = f.querySelector('.copy'), send = f.querySelector('.send');
+    box.addEventListener('focus', function () { box.select(); });
+    copy.addEventListener('click', function () {
+      function done() { copy.textContent = 'Copied'; setTimeout(function () { copy.textContent = 'Copy link'; }, 2000); }
+      if (navigator.clipboard) navigator.clipboard.writeText(link).then(done, function () { box.select(); });
+      else { box.select(); try { document.execCommand('copy'); done(); } catch (x) {} }
+      (window.vjq = window.vjq || []).push(['event', 'copy_share_link']);
+    });
+    if (send) send.addEventListener('click', function () {
+      navigator.share({ text: words, url: link }).catch(function () {});
+      (window.vjq = window.vjq || []).push(['event', 'send_share_link']);
+    });
+  });
+  fetch(APP + '/waitlist/brought?c=' + encodeURIComponent(code)).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d) return;
+    document.querySelectorAll('.brought').forEach(function (e) {
+      e.textContent = d.nyc === 0 ? 'You have not brought anyone yet.' : 'You have brought ' + d.nyc + (d.nyc === 1 ? ' New Yorker.' : ' New Yorkers.');
+    });
+  }).catch(function () {});
+}
+if (keep('vj_code')) joined(keep('vj_code'), keep('vj_nyc') === '1', '', '');
+
 // The waiting list: each form posts an email and a place to the app, which keeps one row per address.
-document.querySelectorAll('form.join').forEach(function (form) {
+document.querySelectorAll('form.join:not(.done)').forEach(function (form) {
   var note = form.querySelector('.fine'), input = form.querySelector('input[name=email]'), where = form.querySelector('input[name=place]'), button = form.querySelector('button');
   function say(text) { note.textContent = text; note.classList.add('bad'); }
   form.addEventListener('submit', function (e) {
@@ -254,17 +311,13 @@ document.querySelectorAll('form.join').forEach(function (form) {
     var place = where.value.trim();
     if (place.length < 2) { say('Please tell us your ZIP code or city.'); where.focus(); return; }
     button.disabled = true;
-    fetch('https://app.vibejibe.me/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, place: place }) })
+    fetch(APP + '/waitlist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, place: place, s: keep('vj_s'), r: keep('vj_r') }) })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok) throw { shown: d.error }; return d; }); })
       .then(function (d) {
         tally();
         (window.vjq = window.vjq || []).push(['event', 'join_waitlist']);
-        document.querySelectorAll('form.join').forEach(function (f) {
-          f.classList.add('done');
-          f.innerHTML = '<b>You are on the list.</b><p class="fine">We will write to ' + email.replace(/[<>&"]/g, '') + (d.nyc ? ' when New York opens.' : ' when the clubs open where you live.') + '</p>'
-            + '<a class="cta" href="https://app.vibejibe.me/signup?email=' + encodeURIComponent(email) + '&place=' + encodeURIComponent(place) + '">Meet your VibeJibe now</a>'
-            + '<p class="fine">You do not have to wait for opening night. Create your VibeJibe today and it starts getting to know you. Your first 30 messages are free.</p>';
-        });
+        keep('vj_code', d.code || ''); keep('vj_nyc', d.nyc ? '1' : '0');
+        joined(d.code || '', d.nyc, email, place);
       })
       .catch(function (err) { button.disabled = false; say((err && err.shown) || 'That did not go through. Please try again in a little while.'); });
   });
