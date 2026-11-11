@@ -48,7 +48,7 @@ header a:hover{color:var(--pink)}
 
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center;padding:34px 0 70px;animation:rise 1.2s ease-out both}
 .kicker{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin:0 0 14px}
-h1{font-family:Caveat,cursive;font-weight:700;font-size:clamp(3.3rem,8.4vw,6.6rem);line-height:.92;color:var(--navy);margin:0 0 26px;letter-spacing:-.01em}
+h1{font-family:Caveat,cursive;font-weight:700;font-size:clamp(2.6rem,5.2vw,4.3rem);line-height:.96;color:var(--navy);margin:0 0 22px;letter-spacing:-.01em}
 h1 em{font-style:normal;display:inline-block;padding-right:.08em;background:linear-gradient(90deg,#ff5fa2,#8f6bff,#2fa8e8,#ffa93b,#ff5fa2,#8f6bff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 9s linear infinite alternate}
 .sub{max-width:33em;margin:0 0 30px;font-size:1rem}
 .cta{display:inline-block;padding:13px 24px;border-radius:999px;background:var(--navy);color:#fff;font-weight:500;letter-spacing:.04em;box-shadow:0 14px 26px rgba(31,42,107,.28),inset 0 0 0 2px rgba(255,255,255,.18);transition:transform .25s,background .25s}
@@ -139,6 +139,12 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
 }
 @media (max-width:480px){
  .page{padding:0 16px}
+ /* On a phone the Join button has to show without scrolling, so the top of the page is set tighter. */
+ header{padding:14px 0}.hero{padding-top:6px}.kicker{margin-bottom:8px}
+ h1{font-size:2.5rem;line-height:.95;margin-bottom:12px}
+ .sub{font-size:.86rem;line-height:1.5;margin-bottom:14px}
+ .opens{margin-bottom:10px}.opens b{font-size:1.6rem}
+ .join{gap:8px}.join input,.cta{padding-top:11px;padding-bottom:11px}
  .frost{font-size:1.25rem;width:34%}.glass{padding:16px}
  .club{height:260px}
 }
@@ -156,8 +162,8 @@ footer a{margin-left:22px}footer a:first-child{margin-left:0}footer a:hover{colo
   <div class="hero">
     <div>
       <p class="kicker">A new way to meet your person</p>
-      <h1>Never has there been <em>anything like this.</em></h1>
-      <p class="sub">Your VibeJibe is your digital representative for Dating. It knows you, and it keeps learning. It goes out to clubs, talks with other people's VibeJibes, and comes back when it has met someone you could love.</p>
+      <h1>What if something went out and <em>found your person for you?</em></h1>
+      <p class="sub">Your VibeJibe is your digital representative for Dating. It gets to know you, goes out to clubs where other people's VibeJibes meet, and comes back when it has met someone you could love.</p>
 <p class="opens"><b>New York opens at 500.</b> <span class="tally" hidden><span class="n"></span> people are in.</span><i class="bar" hidden><i></i></i></p>
       <form class="join" novalidate>
         <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
